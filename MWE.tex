@@ -1,0 +1,328 @@
+\documentclass[twoside,12pt]{Classes/aesm_edspia1}
+
+\usepackage[latin1]{inputenc}
+\usepackage[english,french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{lmodern}%font modern
+\rmfamily
+\DeclareFontShape{T1}{lmr}{bx}{sc}{<->ssub * cmr/bx/sc}{} %manque une police en lmodern
+\usepackage{lettrine}
+\usepackage{tabularx}
+\usepackage{epsfig, floatflt, amssymb}
+%\usepackage{wrapfig}%figure entouré de texte.
+\usepackage{moreverb} %% pour le verbatim en boite
+\usepackage{cases}%equations en systemes numérotés - soluce possible package : CASES
+%\usepackage{slashbox} %% pour couper les colonnes des tableaux en diagonale
+%\usepackage{layout}
+%\usepackage{showkeys} %% pour voir les labels
+\usepackage{multirow} %% pour regrouper un texte sur plusieurs lignes dans une table
+\usepackage{url} %% pour citer les url par \url
+\usepackage[all]{xy} %% pour la barre au dessus des symboles
+%\usepackage{shorttoc} %% pour plusieurs tables des matières par la commande \shorttableofcontents{Titre}{profondeur}.
+\usepackage{textcomp} %% pour le symbol pour mille par \textperthousand et degrés par \degres
+\usepackage[right]{eurosym}
+\usepackage{setspace} %interligne simple, double etc...
+\usepackage{eurosans} %%pour le symbole \euro
+\usepackage{epic,eepic}
+\usepackage{soul}
+%\usepackage{lineno}%numéroter les lignes
+\usepackage[nottoc]{tocbibind} % tables des figures, des matieres et autres dans la TOC
+%\usepackage{palatino}
+\usepackage{fancybox}
+\usepackage[leftcaption]{sidecap}
+%\usepackage[labelsep=endash, textfont={normalsize,onehalfspacing}, margin=5pt, format=hang, labelfont=bf]{caption}
+\usepackage[labelsep=endash, textfont={footnotesize, singlespacing}, margin=10pt, format=plain, labelfont=bf]{caption}
+\usepackage[Conny]{fncychap} %en tete chapitrage
+\newcommand{\ie}{c.-\`a-d.~}
+\hbadness=10000% pb d'overfull box réglé
+\hfuzz=50pt
+\pdfcompresslevel9 % pour compresser le pdf final au maximum
+\pdfoptionpdfminorversion=5 % pour accepté les images PDF version 1.5 (ex: celles produites par Office 2007)
+\def\underscore{\char`\_}
+\makeatletter
+\renewcommand{\thesection}{\arabic {section}}
+\renewcommand{\SC@figure@vpos}{c}% centrer verticalement le caption avec le package sidecap...
+\renewcommand{\fnum@figure}{\small\textbf{Figure~\thefigure}}
+\renewcommand{\fnum@table}{\small\textbf{Tableau~\thetable}}
+%\newcommand\figcaption{\def\@captype{figure}\caption}
+%\newcommand\tabcaption{\def\@captype{table}\caption}
+\makeatother
+\usepackage{subfig}
+\def\thechapter{\Roman{chapter}}
+\def\thechapter{\Roman{chapter}}
+\usepackage{float}
+\usepackage{here}
+%\newlength\longest
+\usepackage{pifont}
+\input{tcilatex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand\figurename{\small\textbf{Figure}}
+
+\addtocounter{page}{-1}%pour revenir à 0
+
+
+
+\makethese %% crée la couverture.
+
+\onehalfspacing
+
+
+\fancyhead[LE,RO]{Introduction }
+%\fancyhead[RO]{\bfseries\rightmark}
+%\fancyhead[LE]{\bfseries\leftmark}
+\fancyfoot[RO]{\thepage}
+\fancyfoot[LE]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+%\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\chaptername~\thechapter. #1 }}{}}
+%\renewcommand{\sectionmark}[1]{\markright{\thechapter.\thesection~ #1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Introduction g\'en\'erale}
+
+\addcontentsline{toc}{chapter}{Introduction générale}
+%==================================================================================================%
+Dans ce chapitre, nous allons parler des
+g\'{e}n\'{e}ralit\'{e}s sur la
+SUSY. Nous commencerons par la description de l'alg\`{e}bre supersym\'{e}%
+trique, ensuite nous allons donner ses repr\'{e}sentations. Et
+finalement on va parler des superespaces et
+superchamps.
+
+\section{Mod\`{e}le particulier avec une vari\'{e}t\'{e} hyper-K\"{a}%
+hlerienne et un groupe de jauge $U(1)\times U(1)$}
+
+Dans les parties pr\'{e}c\'{e}dentes, on a vu que ce mod\`{e}le
+contient un multiplet de mati\`{e}re d\'{e}crit par un multiplet
+tensoriel ou un hyper-multiplet, et $n$ superchamps de Maxwell
+$U(1)$. Dor\'{e}navant on va
+le restreindre par l'imposition du potentiel de K\"{a}hler suivant:%
+\begin{equation}
+K\left( Q^{u},\overline{Q}^{\overline{u}}\right) =\overline{Q}^{1}Q^{1}+%
+\overline{Q}^{2}Q^{2}=\left( \overline{Q}^{1}\text{ }Q^{1}\right)
+\begin{pmatrix}
+1 & 0 \\
+0 & 1%
+\end{pmatrix}%
+\binom{Q^{1}}{Q^{2}}.  \label{20}
+\end{equation}%
+On remarque que la m\'{e}trique de K\"{a}hler est Ricci-plate, on a
+aussi
+chang\'{e} les notations de deux multiplet chiral de l'hypermultiplet: $%
+\left( \overline{Q}^{1},\text{ }Q^{1}\right) .$ le mod\`{e}le dual \`{a} (\ref%
+{17}) avec le potentiel de K\"{a}hler particulier (\ref{20}):%
+\begin{eqnarray}
+\mathcal{L} &\mathcal{=}&\mathcal{L}_{gauge}+\dint d^{4}\theta
+\left[
+\overline{Q}^{1}e^{-2g_{a}V^{a}}Q^{1}+\overline{Q}^{2}e^{2g_{a}V^{a}}Q^{2}%
+\right]  \label{21} \notag \\
+&&+\dint d^{2}\theta \left[ \left( m+\sqrt{2}ig_{a}X^{a}\right) Q^{1}Q^{2}-%
+\frac{ig_{a}}{k_{a}}Y\right] , \label{21}
+\end{eqnarray}%
+o\`{u} $m$ est un param\`{e}tre de masse, et $Q^{1}$ et $Q^{2}$ ont
+deux charges de $U(1)$ opos\'{e}es.\newline Pour determiner $H\left(
+L,\Phi ,\overline{\Phi }\right) $, on doit effectuer une
+transformation de dualit\'{e} inverse, pour ceci on doit faire
+le changement de variables suivant:%
+\begin{equation}
+Q^{1}=\sqrt{\frac{\Phi }{\sqrt{2}}}e^{-\Phi \prime
+},Q^{2}=i\sqrt{\frac{\Phi
+}{\sqrt{2}}}e^{\Phi \prime }\  \  \Rightarrow Q^{1}Q^{2}=\frac{i}{\sqrt{2}}%
+\Phi .  \label{tfn}
+\end{equation}%
+Alors (\ref{21}) devient:%
+\begin{eqnarray*}
+\mathcal{L} &\mathcal{=}&\mathcal{L}_{gauge}+\frac{1}{\sqrt{2}}\dint
+d^{4}\theta \sqrt{\overline{\Phi }\Phi }\left[ e^{\overline{\Phi
+}\prime +\Phi \prime +2g_{a}V^{a}}+e^{-\overline{\Phi }\prime -\Phi
+\prime
+-2g_{a}V^{a}}\right] \\
+&&+\dint d^{2}\theta \left( m+\sqrt{2}ig_{a}X^{a}\right) \frac{i}{\sqrt{2}}%
+\Phi -\frac{ig_{a}}{k_{a}}Y+h.c.
+\end{eqnarray*}%
+Le potentiel de K\"{a}hler depend maintenant de $\overline{\Phi
+}\prime
++\Phi \prime ,$ alors le model dual \`{a} (\ref{21}) est donn\'{e} par:%
+\begin{eqnarray}
+\mathcal{L} &\mathcal{=}&\mathcal{L}_{gauge}+\dint d^{4}\theta H\left( L,\Phi ,%
+\overline{\Phi }\right) +\dint d^{2}\theta \left( m+\sqrt{2}%
+ig_{a}X^{a}\right) \frac{i}{\sqrt{2}}\Phi  \label{24} \\
+&&-\frac{ig_{a}}{k_{a}}Y+h.c,  \notag
+\end{eqnarray}%
+avec:%
+\begin{equation}
+H\left( L,\Phi ,\overline{\Phi }\right) =\sqrt{L^{2}+2\Phi \overline{\Phi }}%
+-L\ln \left( L+\sqrt{L^{2}+2\Phi \overline{\Phi }}\right)
++2g_{a}LV^{a}. \label{25}
+\end{equation}%
+En effet:%
+\begin{equation}
+\dint d^{4}\theta \sqrt{\frac{\overline{\Phi }\Phi }{2}}\left[ e^{\overline{%
+\Phi }\prime +\Phi \prime +2g_{a}V^{a}}+e^{-\overline{\Phi }\prime
+-\Phi \prime -2g_{a}V^{a}}\right] ,  \label{dl1}
+\end{equation}%
+est \'{e}quivalant \`{a}\footnote{%
+En \'{e}limiant L dans (\ref{dl2}), par son \'{e}quation du
+mouvement, on trouve facilement (\ref{dl1})}:
+\begin{equation}
+\dint d^{4}\theta \left[ \sqrt{\frac{\overline{\Phi }\Phi
+}{2}}\left[ e^{A}+e^{-A}\right] -L\left( A-2g_{a}V^{a}\right)
+\right] ,  \label{dl2}
+\end{equation}%
+o\`{u} $A$ est un superchamp arbitraire r\'{e}el et $L$ est un superchamp lin%
+\'{e}aire qui joue le r\^{o}le d'un multiplicateur de Lagrange.
+L'\'{e}quation du mouvement de A implique:%
+\[
+\sqrt{\frac{\overline{\Phi }\Phi }{2}}\left( e^{A}-e^{-A}\right)
+-L=0,
+\]%
+dont la solution est:%
+\begin{equation}
+e^{A}=\frac{L}{\sqrt{2\left\vert \Phi \right\vert ^{2}}}\left( L+\sqrt{%
+L^{2}+2\left\vert \Phi \right\vert ^{2}}\right) .  \label{dl3}
+\end{equation}%
+En substituant (\ref{dl3}) dans (\ref{dl2}) on trouve:%
+\[
+\dint d^{4}\theta \left[ \sqrt{L^{2}+2\left\vert \Phi \right\vert
+^{2}}-L\ln
+\left( L+\sqrt{L^{2}+2\left\vert \Phi \right\vert ^{2}}\right) +2Lg_{a}V^{a}%
+\right]+un\,terme\,de\,surface =\dint d^{4}\theta H\left( L\right).
+\]%
+\ Il est maintenant simple de v\'{e}rifier que $H\left( L,\Phi ,\overline{%
+\Phi }\right) $ satisfait l'\'{e}quation de Laplace. Le lagrangien
+(\ref{21}) depend d'un champ 4-forme $Y$ mais son \'{e}quation de
+mouvement pose la
+contrainte suivante:%
+\begin{equation}
+\frac{g_{a}}{k_{a}}=0.  \label{26}
+\end{equation}%
+Alors la d\'{e}pendance du champ non dynamique $Y$ est
+\'{e}limin\'{e}e grace \`{a} la contrainte (\ref{26}).\newline
+Remarque: dans le cas d'un seul $U(1)$ la contrainte (\ref{26}) devient: $%
+\frac{g}{k}=0$, alors soit l'hypermultiplet est non charg\'{e} sous
+$U(1)$ $\left( g=0\right) $, ou la seconde SUSY est r\'{e}alis\'{e}e
+lin\'{e}airement $\left( \frac{1}{k}=0\right) $, et
+dans les deux cas on peut pas bris\'{e}e la SUSY $\mathcal{N}=2$ \`{a} deux \'{e}chelles diff%
+\'{e}rentes.
+
+\section{Vide du mod\`{e}le}
+
+Comme ce mod\`{e}le contient un hypermultiplet $\left( 0^{4},\frac{1}{2}%
+^{2}\right) $ et un multiplet de Maxwell $\left( 0^{2},\frac{1}{2}%
+^{2},1\right) $ alors on a deux phases; la phase de Higgs qui est associ\'{e}%
+e \`{a} l'hypermultiplet et dans laquelle le groupe de jauge
+$U(1)\times U(1) $ est intact \cite{1}, et celle de Coulomb qui est
+associ\'{e}e \`{a} le multiplet de Maxwell et dans laquelle le
+groupe de jauge $U(1)\times U(1)$ est bris\'{e}. on remarque qu'on
+ne peut utiliser dans la phase de Coulomb que le formalisme
+d'hypermultiplet, car si $U(1)\times U(1)$ est intact
+alors la valeur moyenne dans le vide ( VEV\ ) des champs scalaires $%
+\left \langle q^{u}\right \rangle \ $est nulle, mais la
+d\'{e}finition des champs (\ref{tfn}) montre que $\left \langle
+q^{u}\right \rangle $ ne peut pas \^{e}tre nul, par cons\'{e}quent
+on peut utiliser le formalisme tensoriel seulement dans la phase de
+Higgs, mais l'analyse de cette branche est plus simple si on utilise
+le formalisme tensoriel.
+
+\subsection{Phase de Coulomb}
+
+Comme ce qu'on a vu, dans le formalisme d'hypermultiplet le
+lagrangien est
+donn\'{e} par (\ref{21}) \cite{1}:%
+\begin{eqnarray*}
+\mathcal{L} &\mathcal{=}&\dint d^{4}\theta \left( \overline{Q}%
+^{1}e^{-2g_{a}V^{a}}Q^{1}+\overline{Q}^{2}e^{2g_{a}V^{a}}Q^{2}\right)
++\dint
+d^{4}\theta \xi _{a}V^{a} \\
+&&+\frac{i}{2}\dint d^{4}\theta \left[
+\overline{\mathcal{F}}_{a}\left(
+\overline{X}^{b}\right) X^{a}-\mathcal{F}_{a}\left( X^{b}\right) \overline{X}%
+^{a}\right] \\
+&&+\dint d^{2}\theta \left( m+\sqrt{2}ig_{a}X^{a}\right) Q^{1}Q^{2}+h.c-%
+\frac{i}{4}\dint d^{2}\theta \mathcal{F}_{ab}\left( X^{c}\right)
+W^{a}W^{b}+h.c \\
+&&-\dint d^{2}\theta \left( \frac{e}{4}X^{a}+\frac{i}{4k_{a}}\mathcal{F}%
+_{a}\left( X^{b}\right) \right) +h.c.
+\end{eqnarray*}%
+Le potentiel scalaire est donn\'{e} par \cite{WB}:%
+\begin{equation*}
+V_{s}=\overline{F}^{\overline{q}^{1}}F^{q^{1}}+\overline{F}^{\overline{q}%
+^{2}}F^{q^{2}}+h^{ab}\overline{F}^{\overline{x}^{a}}F^{x^{b}}+\frac{1}{2}%
+h^{ab}D_{a}D_{b}.
+\end{equation*}%
+Calculons les expressions de $\overline{F}^{\overline{q}^{1}}$et $\overline{F%
+}^{\overline{q}^{2}}$:%
+\begin{equation*}
+\begin{tabular}{l}
+$\dint d^{4}\theta \left( \overline{Q}^{\overline{1}}e^{-2g_{a}V^{a}}Q^{1}%
+\right) +\dint d^{2}\theta \left( m+\sqrt{2}ig_{a}X^{a}\right)
+Q^{1}Q^{2}+h.c $ \\
+$=\dint d^{4}\theta \left[ \overline{Q}^{\overline{1}}\left(
+1-2g_{a}V^{a}+...\right) Q^{1}\right] +\dint d^{2}\theta \left( m+\sqrt{2}%
+ig_{a}X^{a}\right) Q^{1}Q^{2}+h.c,$ \\
+$\supset \dint d^{4}\theta \left[ \left( \overline{\theta }^{2}\overline{F}^{%
+\overline{q}^{1}}\right) \left( 1\right) \left( \theta ^{2}F^{q^{1}}\right) %
+\right] +\dint d^{2}\theta \left( m+\sqrt{2}ig_{a}x^{a}\right)
+\left( \theta
+^{2}F^{q^{1}}\right) q^{2}+h.c,$ \\
+$=\overline{F}^{\overline{q}^{1}}F^{q^{1}}+\left( m+\sqrt{2}%
+ig_{a}x^{a}\right) F^{q^{1}}q^{2}+h.c.$%
+\end{tabular}%
+\end{equation*}%
+Alors l'\'{e}quation de mouvement de $F^{q^{1}}$:%
+\begin{equation*}
+\overline{F}^{\overline{q}^{1}}+\left( m+\sqrt{2}ig_{a}x^{a}\right)
+q^{2}=0\Rightarrow \overline{F}^{q^{1}}=-\left(
+m+\sqrt{2}ig_{a}x^{a}\right) q^{2}=-m_{eff}q^{2},
+\end{equation*}%
+avec%
+\begin{equation*}
+m_{eff}=m+\sqrt{2}ig_{a}x^{a}.
+\end{equation*}
+
+\begin{itemize}
+\item
+\begin{eqnarray*}
+&&\dint d^{4}\theta \left(
+\overline{Q}^{2}e^{2g_{a}V^{a}}Q^{2}\right)
++\dint d^{2}\theta \left( m+\sqrt{2}ig_{a}X^{a}\right) Q^{1}Q^{2}+h.c \\
+&=&\dint d^{4}\theta \left[ \overline{Q}^{2}\left(
+1+2g_{a}V^{a}+...\right) Q^{2}\right] +\dint d^{2}\theta \left(
+m+\sqrt{2}ig_{a}X^{a}\right)
+Q^{1}Q^{2}+h.c, \\
+&\supset &\dint d^{4}\theta \left[ \left( \overline{\theta }^{2}\overline{F}%
+^{\overline{q}^{2}}\right) \left( 1\right) \left( \theta
+^{2}F^{q^{2}}\right) \right] +\dint d^{2}\theta \left( m+\sqrt{2}%
+ig_{a}x^{a}\right) \left( \theta ^{2}F^{q^{2}}\right) q^{1}+h.c, \\
+&=&\overline{F}^{\overline{q}^{2}}F^{q^{2}}+\left( m+\sqrt{2}%
+ig_{a}x^{a}\right) F^{q^{2}}q^{1}+h.c.
+\end{eqnarray*}%
+Alors l'\'{e}quation de mouvement de $F^{q^{2}}$:%
+\begin{equation*}
+\overline{F}^{\overline{q}^{2}}+\left( m+\sqrt{2}ig_{a}x^{a}\right)
+q^{1}=0\Rightarrow \overline{F}^{\overline{q}^{2}}=-\left( m+\sqrt{2}%
+ig_{a}x^{a}\right) q^{1}=-m_{eff}q^{1}.
+\end{equation*}%
+Calcul de $F^{x^{a}}:$
+\item
+\begin{equation*}
+\begin{tabular}{lll}
+$\frac{i}{2}\dint d^{4}\theta \left( \overline{F}_{a}X^{a}-F_{a}\overline{X}%
+^{a}\right) $ & $=$ & $\frac{i}{2}\dint d^{4}\theta \left( \overline{F}_{ba}%
+\overline{X}^{b}X^{a}-F_{ba}X^{b}\overline{X}^{a}\right) ,$ \\
+&  & $\supset \frac{i}{2}\dint d^{4}\theta \left[
+\overline{F}_{ba}\left( \overline{\theta
+}^{2}\overline{F}^{\overline{x}^{b}}\right) \left( \theta
+^{2}F^{x^{a}}\right) -F_{ba}\left( \theta ^{2}F^{x^{b}}\right)
+\left(
+\overline{\theta }^{2}\overline{F}^{\overline{x}^{a}}\right) \right] ,$ \\
+&  & $=\frac{i}{2}\left[ \overline{F}_{ba}\overline{F}^{\overline{x}%
+^{b}}F^{x^{a}}-F_{ba}F^{x^{b}}\overline{F}^{\overline{x}^{a}}\right] .$%
+\end{tabular}%
+\end{equation*}
+\end{itemize}
+\end{document}
