@@ -1,4 +1,4 @@
-% modifié le 2 février 2009 par D. Lantiat pour AESM
+% modifiï¿½ le 2 fï¿½vrier 2009 par D. Lantiat pour AESM
 %-------------------------- identification ---------------------
 %\NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{Classes/aesm_edspia}
@@ -12,13 +12,13 @@
 \else   \LoadClass[pdftex, a4paper]{book}
 \fi
 
-%Packages à charger
+%Packages ï¿½ charger
 \usepackage{amssymb}
 \usepackage{graphics}
 \usepackage{fancyhdr} % en-tete et pieds de page
 \usepackage{eucal}
 \usepackage[usenames, dvipsnames]{xcolor}
-\usepackage[numbers,sort&compress]{natbib}
+% vall  % vall   \usepackage[numbers,sort&compress]{natbib}
 \usepackage{hypernat}
 \usepackage{ifpdf}
 \usepackage{ifthen}
@@ -88,7 +88,7 @@
     \usepackage{graphicx}
   \fi
 
-%Paramètres A4
+%Paramï¿½tres A4
 \ifpdf
    \pdfpageheight=297mm
    \pdfpagewidth=210mm
@@ -103,10 +103,10 @@
 \setlength{\evensidemargin}{0cm}
 \setlength{\oddsidemargin}{0mm} % 15 mm par def.
 \setlength{\topmargin}{1mm}
-\setlength{\headheight}{0cm} % 1 cm par défaut
+\setlength{\headheight}{0cm} % 1 cm par dï¿½faut
 \setlength{\headsep}{1.00cm}
 \setlength{\textheight}{22cm}
-\setlength{\textwidth}{17cm} % 16 cm par déf.
+\setlength{\textwidth}{17cm} % 16 cm par dï¿½f.
 \setlength{\marginparsep}{0cm} % 1mm par def.
 \setlength{\marginparwidth}{0cm}
 \setlength{\headheight}{2\baselineskip}
@@ -170,12 +170,12 @@
 \begin{quote}}
 {\end{quote}\end{alwayssingle}}
 
-%Résumé
+%Rï¿½sumï¿½
 
 \newenvironment{resume} {\begin{alwayssingle} \pagestyle{empty}
   \begin{flushleft}
   \vspace*{1.5cm}
-  {\Large \bfseries  Résumé}
+  {\Large \bfseries  Rï¿½sumï¿½}
   \end{flushleft}
   \vspace{0.5cm}
    \begin{quote}}
@@ -214,7 +214,7 @@
 
 \newcommand{\PRESn}{M.XXXX}
 \newcommand{\PRESp}{xxxxxxxx, Univ.}
-\newcommand{\PRESq}{Président}
+\newcommand{\PRESq}{Prï¿½sident}
 
 \newcommand{\RAPAn}{M.}
 \newcommand{\RAPAp}{xxxxxxx}
@@ -262,23 +262,23 @@
 \hbox{\raisebox{0.4em}{\vrule depth 0pt height 1pt width 17cm}}\setlength{\baselineskip}{13pt}~\\
 {\Large{\textbf{}}}\\[\baselineskip]
       \PRESENTATION\\[\baselineskip]
-{\Large{\textbf{\it{Université Mohammed V-Agdal}}}}\\[\baselineskip]
-      {\textbf{Faculté des Sciences Rabat}}{~~ \vspace{2cm }~~}\\[\baselineskip]
-      {\textbf{Département de Physique }}{~~ \vspace{0cm }~~}\\[\baselineskip]
-       {\textbf{Laboratoire de Physique des Hautes Energies, Modélisation et Simulation }}{~~ \vspace{1cm }~~}\\[\baselineskip]
-      Mémoire De Master~: \it {Physique Math\'{e}matique}\\[\baselineskip]
+{\Large{\textbf{\it{Universit\'e Mohammed V-Agdal}}}}\\[\baselineskip]
+      {\textbf{Facult\'e des Sciences Rabat}}{~~ \vspace{2cm }~~}\\[\baselineskip]
+      {\textbf{D\'epartement de Physique }}{~~ \vspace{0cm }~~}\\[\baselineskip]
+       {\textbf{Laboratoire de Physique des Hautes Energies, Mod\'elisation et Simulation }}{~~ \vspace{1cm }~~}\\[\baselineskip]
+      M\'{e}moire De Master~: \it {Physique Math\'{e}matique}\\[\baselineskip]
             Domaine De Recherche~: \COMPU\\[\baselineskip]
-      Présenté par~:~\\[\baselineskip]
+      Pr\'esent\'e par~:~\\[\baselineskip]
       \baselineskip=20pt
-{\LARGE{\textbf{\textrm{Mohamed Vall}}}}\\[\baselineskip]
+{\LARGE{\textbf{\textrm{Mohamed Vall Ould Moulaye Abdella}}}}\\[\baselineskip]
             \hbox{\raisebox{0.2em}{\vrule depth 0pt height 3.5pt width 17cm}}
             \setlength{\baselineskip}{4pt}
             \hbox{\raisebox{0.4em}{\vrule depth 0pt height 1pt width 17cm}}\setlength{\baselineskip}{10pt}~\\
             \vspace*{-26pt}
             {\Large\textbf{\begin{spacing}{1} \bf{BRISURE DE LA SUSY N=2 A DEUX ECHELLES DIFFERENTES} \end{spacing}}}~\\[\baselineskip]
         \hbox{\raisebox{0.4em}{\vrule depth 0pt height 1pt width 17cm}}~\\~\\[\baselineskip]~\\
-        Encadrant  : \textbf{Mr. EEEEEEE}\\[\baselineskip]
-        Co-Encadrant : \textbf{ Mr. FFFFFF}\\[\baselineskip]
+        Encadrant  : \textbf{Mr. El Hassan Saidi}\\[\baselineskip]
+        Co-Encadrant : \textbf{ Mr. Rachid Ahl Laamara}\\[\baselineskip]
       Soutenue le 23 Octobre 2013\DATE\\[\baselineskip]~\\~\\
       Devant le\\[\baselineskip]~\\[\baselineskip]
 
@@ -306,7 +306,7 @@
 \renewcommand{\PRESq}{#3}%
 }
 
-% Nom Profession Qualité de l'invité
+% Nom Profession Qualitï¿½ de l'invitï¿½
 \newcommand{\Invite}[3]{%
 \renewcommand{\INVAn}{#1}%
 \renewcommand{\INVAp}{#2}%
